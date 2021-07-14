@@ -1,6 +1,6 @@
 var tasks = {};
 
-var createTask = function (taskText, taskDate, taskList) {
+var createTask = function(taskText, taskDate, taskList) {
   // create elements that make up a task item
   var taskLi = $("<li>").addClass("list-group-item");
   var taskSpan = $("<span>")
@@ -18,7 +18,7 @@ var createTask = function (taskText, taskDate, taskList) {
   $("#list-" + taskList).append(taskLi);
 };
 
-var loadTasks = function () {
+var loadTasks = function() {
   tasks = JSON.parse(localStorage.getItem("tasks"));
 
   // if nothing in localStorage, create a new object to track all task status arrays
